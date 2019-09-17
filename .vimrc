@@ -22,6 +22,8 @@ set incsearch
 set number relativenumber
 set ruler
 set hidden
+set undodir=~/.vim/undodir
+set undofile
 highlight Comment ctermfg=green
 
 set path=$PWD/**
