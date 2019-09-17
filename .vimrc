@@ -21,6 +21,7 @@ set ai
 set incsearch
 set number relativenumber
 set ruler
+set hidden
 highlight Comment ctermfg=green
 
 set path=$PWD/**
