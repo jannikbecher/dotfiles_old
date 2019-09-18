@@ -26,10 +26,8 @@ nnoremap <silent> <leader> :<c-u>WhichKey '<space>'<CR>
 let g:maplocalleader = ','
 nnoremap <silent> <localleader> :<c-u>WhichKey ','<CR>
 
+filetype plugin indent on
 syntax on
-set tabstop=4
-set shiftwidth=4
-set expandtab
 set autoindent
 set incsearch
 set number relativenumber
