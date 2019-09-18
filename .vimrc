@@ -10,9 +10,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
 " reStructuredText
 Plug 'gu-fan/riv.vim', { 'for': 'rst' }
 autocmd! User riv.vim let g:riv_global_leader = ";"
+
 call plug#end()
 
 let mapleader = ","
@@ -21,7 +23,7 @@ syntax on
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set ai
+set autoindent
 set incsearch
 set number relativenumber
 set ruler
@@ -35,6 +37,10 @@ set path=$PWD/**
 
 noremap gn :bn<cr>
 noremap gp :bp<cr>
+
+nnoremap <Leader>e :e ~/.vimrc<CR>
+nnoremap <Leader>r :source $MYVIMRC<CR>
+nnoremap <Leader>d :bd<CR>
 
 "fzf bindings
 nnoremap <Leader>f :GFiles<CR>
