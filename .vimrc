@@ -11,13 +11,20 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
+" which key
+Plug 'liuchengxu/vim-which-key'
+set timeoutlen=300 
+
 " reStructuredText
 Plug 'gu-fan/riv.vim', { 'for': 'rst' }
-autocmd! User riv.vim let g:riv_global_leader = ";"
+let g:riv_global_leader = "\<localleader>"
 
 call plug#end()
 
-let mapleader = ","
+let g:mapleader = "\<space>"
+nnoremap <silent> <leader> :<c-u>WhichKey '<space>'<CR>
+let g:maplocalleader = ','
+nnoremap <silent> <localleader> :<c-u>WhichKey ','<CR>
 
 syntax on
 set tabstop=4
@@ -35,26 +42,28 @@ highlight Comment ctermfg=green
 
 set path=$PWD/**
 
-noremap gn :bn<cr>
-noremap gp :bp<cr>
+noremap <silent> gn :bn<cr>
+noremap <silent> gp :bp<cr>
 
-nnoremap <Leader>e :e ~/.vimrc<CR>
-nnoremap <Leader>r :source $MYVIMRC<CR>
-nnoremap <Leader>d :bd<CR>
+nnoremap <silent> <leader>e :e ~/.vimrc<CR>
+nnoremap <silent> <leader>r :source $MYVIMRC<CR>
+nnoremap <silent> <leader>d :bd<CR>
+nnoremap <silent> <leader>D :bd!<CR>
+nnoremap <silent> <leader><leader> :b#<CR>
 
 "fzf bindings
-nnoremap <Leader>f :GFiles<CR>
-nnoremap <Leader>F :Files<CR>
-nnoremap <Leader>b :Buffers<CR>
-nnoremap <Leader>h :History<CR>
-nnoremap <Leader>t :BTags<CR>
-nnoremap <Leader>T :Tags<CR>
-nnoremap <Leader>l :BLines<CR>
-nnoremap <Leader>L :Lines<CR>
-nnoremap <Leader>' :Marks<CR>
-nnoremap <Leader>/ :Rg<CR>
-nnoremap <Leader>H :Helptags!<CR>
-nnoremap <Leader>C :Commands<CR>
-nnoremap <Leader>: :History:<CR>
-nnoremap <Leader>M :Maps<CR>
-nnoremap <Leader>s :Filetypes<CR>
+nnoremap <leader>f :GFiles<CR>
+nnoremap <leader>F :Files<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>h :History<CR>
+nnoremap <leader>t :BTags<CR>
+nnoremap <leader>T :Tags<CR>
+nnoremap <leader>l :BLines<CR>
+nnoremap <leader>L :Lines<CR>
+nnoremap <leader>' :Marks<CR>
+nnoremap <leader>/ :Rg<CR>
+nnoremap <leader>H :Helptags!<CR>
+nnoremap <leader>C :Commands<CR>
+nnoremap <leader>: :History:<CR>
+nnoremap <leader>M :Maps<CR>
+nnoremap <leader>s :Filetypes<CR>
