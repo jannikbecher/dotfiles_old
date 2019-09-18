@@ -5,10 +5,14 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+" all files
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+" reStructuredText
+Plug 'gu-fan/riv.vim', { 'for': 'rst' }
+autocmd! User riv.vim let g:riv_global_leader = ";"
 call plug#end()
 
 let mapleader = ","
@@ -24,6 +28,7 @@ set ruler
 set hidden
 set undodir=~/.vim/undodir
 set undofile
+set clipboard+=unnamed
 highlight Comment ctermfg=green
 
 set path=$PWD/**
