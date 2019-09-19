@@ -15,10 +15,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'liuchengxu/vim-which-key'
 set timeoutlen=300 
 
-" reStructuredText
-Plug 'gu-fan/riv.vim', { 'for': 'rst' }
-let g:riv_global_leader = "\<localleader>"
-
 call plug#end()
 
 let g:mapleader = "\<space>"
@@ -49,7 +45,7 @@ nnoremap <silent> <leader>d :bd<CR>
 nnoremap <silent> <leader>D :bd!<CR>
 nnoremap <silent> <leader><leader> :b#<CR>
 
-"fzf bindings
+" fzf bindings
 nnoremap <leader>f :GFiles<CR>
 nnoremap <leader>F :Files<CR>
 nnoremap <leader>b :Buffers<CR>
@@ -65,3 +61,9 @@ nnoremap <leader>C :Commands<CR>
 nnoremap <leader>: :History:<CR>
 nnoremap <leader>M :Maps<CR>
 nnoremap <leader>s :Filetypes<CR>
+
+" ftplugin
+augroup filetype_python
+    autocmd!
+    autocmd Filetype python let g:python_recommended_style = 1
+augroup END
