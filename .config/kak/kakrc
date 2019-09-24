@@ -2,4 +2,8 @@ source "%val{config}/plugins/plug.kak/rc/plug.kak"
 
 plug fzf.kak
 
-map global normal <c-p> ': fzf-mode<ret>'
+map global normal <space> , -docstring 'leader'
+map global normal <backspace> <space> -docstring 'remove all sels except main'
+map global normal <a-backspace> <a-space> -docstring 'remove main sel'
+
+map global user f ': fzf-mode<ret>'
