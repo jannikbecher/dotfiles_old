@@ -1,0 +1,5 @@
+source "%val{config}/plugins/plug.kak/rc/plug.kak"
+
+plug fzf.kak
+
+map global normal <c-p> ': fzf-mode<ret>'
