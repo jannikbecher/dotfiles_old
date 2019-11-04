@@ -62,6 +62,12 @@ nnoremap <leader>: :History:<CR>
 nnoremap <leader>M :Maps<CR>
 nnoremap <leader>s :Filetypes<CR>
 
+" clipboard bindings
+nnoremap <leader>y "*y
+nnoremap <leader>p "*p
+nnoremap <leader>Y "+y
+nnoremap <leader>P "+p
+
 " ftplugin
 augroup filetype_python
     autocmd!
