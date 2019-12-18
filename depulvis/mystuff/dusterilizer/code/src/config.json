@@ -1,0 +1,12 @@
+{
+    "config": [
+        {"mode": "pm", "thres": {"pm10": 5}},
+        {"mode": "pm", "thres": {"pm10": 25}},
+        {"mode": "pm", "thres": {"pm10": 50}},
+        {"mode": "pm", "thres": {"pm10": 125}},
+        {"mode": "all", "thres": {"pm10": 50, "co2": 150, "voc": 100}},
+        {"mode": "all", "thres": {"pm10": 125, "co2": 350, "voc": 200}},
+        {"mode": "all", "thres": {"pm10": 200, "co2": 1100, "voc": 800}},
+        {"mode": "all", "thres": {"pm10": 300, "co2": 1600, "voc": 1500}}
+    ]
+}
