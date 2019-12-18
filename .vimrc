@@ -73,3 +73,6 @@ augroup filetype_python
     autocmd!
     autocmd Filetype python let g:python_recommended_style = 1
 augroup END
+
+" Automatically save the file notes when idle
+autocmd CursorHold .notes :write
